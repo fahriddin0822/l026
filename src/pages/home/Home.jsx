@@ -5,6 +5,9 @@ import { useFetch } from '@/hooks/useFetch'
 import React from 'react'
 import Category from '../../components/category/Category'
 import Collection from '../../components/collection/Collection'
+import HotSells from '../../components/hot__sells/HotSells'
+import LowPrices from '../../components/low__prices/LowPrices'
+import Articles from '../../components/articles/Articles'
 
 const Home = () => {
   const {data,error,loading} = useFetch("/product/get")
@@ -16,6 +19,9 @@ const Home = () => {
       <Products isAdmin={false} data={data}/>
       <Category data={categories}/>
       <Collection/>
+      <HotSells isAdmin={false} data={data}/>
+      <LowPrices/>
+      <Articles/>
     </div>
   )
 }

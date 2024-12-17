@@ -11,7 +11,7 @@ const Products = ({ data, isAdmin }) => {
   const productItems = data?.map((product) => (
     <div
       key={product.id}
-      className="w-full min-w-[262px]"
+      className="product w-full min-w-[262px]"
       onClick={() => handleGetDetails(product.id)}
     >
       <div className="h-[349px] relative overflow-hidden product-image">
